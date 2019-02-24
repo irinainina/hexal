@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smith Anderson</title> 
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Maven+Pro:400' rel='stylesheet' type='text/css'> 
+  <title>Smith Anderson</title>   
+  <!--
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Maven+Pro:400' rel='stylesheet' type='text/css'> -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +13,7 @@
     <nav class="main-menu">
       <a href="#" class="menu-item active">portfolio</a>
       <a href="#about" class="menu-item">about</a>
-      <div class="logo"><h1><img src="assets/logo.png" alt="Smith Anderson"></h1></div> 
+      <div class="logo"><h1><img src="img/logo.png" alt="Smith Anderson"></h1></div> 
       <a href="#" class="menu-item">blog</a>
       <a href="#contact" class="menu-item">get in touch</a>
     </nav>
@@ -139,8 +140,8 @@
       </header>
       <div class="contact-form-container">
         <form class="contact-form">
-          <input type="text" name="name" placeholder="Name (Required)" required><br>
-          <input type="email" name="email" placeholder="Email (Required)" required><br>
+          <input type="text" name="name" placeholder="Name (Required)"><br>
+          <input type="email" name="email" placeholder="Email (Required)"><br>
           <input type="text" name="subject" placeholder="Subject"><br>
           <textarea rows="10">Write your message here...</textarea><br>
           <input type="submit" value="send">
@@ -149,7 +150,7 @@
       <div class="contact-text-container">
         <p class="contact-text"><strong>Quisque Hendrerit:</strong> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. </p>
         <p class="contact-addres">Elm St. 14/05 Lost City</p>
-        <p class="contact-phone">+ 3528 331 86 35</p>        
+        <p class="contact-phone">+ 3528 331 86 35</p>
         <p class="contact-email"><a href="mailto:info@hexalcorp.com">info@hexalcorp.com</a></p>
       </div>
     </div>
@@ -181,7 +182,7 @@
       buttons.forEach(btn => btn.classList.remove("btn-active"));
       this.classList.add("btn-active"); 
       
-      slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
+      slides[i].style.backgroundImage = "url(img/slide" + numImage + ".jpg)";
     }
     
   }

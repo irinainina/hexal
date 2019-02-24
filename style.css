@@ -116,15 +116,14 @@ body {
   -webkit-transform: rotate(120deg);
   -ms-transform: rotate(120deg);
   transform: rotate(120deg);
-  width: 178px;
+  width: 180px;
   height: 206px;
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
   margin-top: -38px;  
-  transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s;
+  border: 2px solid red;
 }
 
 .slide:hover,
@@ -132,9 +131,7 @@ body {
   -webkit-transform: scale(1.05) rotate(120deg);
   -ms-transform: scale(1.05) rotate(120deg);
   transform: scale(1.05) rotate(120deg); 
-  transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s;
 }
 
 .slide-mask1 {
@@ -146,10 +143,6 @@ body {
   transform: rotate(-60deg);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
-  
 }
 .slide-mask2 {
   width: 100%;
@@ -161,9 +154,6 @@ body {
   -ms-transform: rotate(-60deg);
   transform: rotate(-60deg);
   position: relative;
-  transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -webkit-transition: 0.5s ease-in-out;
 }
 
 .slide-br-mask {
@@ -179,44 +169,43 @@ body {
 }
 
 .slide1 .slide-mask2 {
-  background-image: url(assets/slide0.jpg);
-  border-left: 1px solid #e4e9eb;
+  background-image: url(img/slide0.jpg);
 }
 .slide2 .slide-mask2 {
-  background-image: url(assets/slide1.jpg);
+  background-image: url(img/slide1.jpg);
 }
 .slide3 .slide-mask2 {
-  background-image: url(assets/slide2.jpg);
+  background-image: url(img/slide2.jpg);
 }
 .slide4 .slide-mask2 {
-  background-image: url(assets/slide3.jpg);
+  background-image: url(img/slide3.jpg);
 }
 .slide5 .slide-mask2 {
-  background-image: url(assets/slide7.jpg);
+  background-image: url(img/slide7.jpg);
 }
 .slide6 .slide-mask2 {
-  background-image: url(assets/slide8.jpg);
+  background-image: url(img/slide8.jpg);
 }
 .slide7 .slide-mask2 {
-  background-image: url(assets/slide9.jpg);
+  background-image: url(img/slide9.jpg);
 }
 .slide8 .slide-mask2 {
-  background-image: url(assets/slide10.jpg);
+  background-image: url(img/slide10.jpg);
 }
 .slide9 .slide-mask2 {
-  background-image: url(assets/slide11.jpg);
+  background-image: url(img/slide11.jpg);
 }
 .slide10 .slide-mask2 {
-  background-image: url(assets/slide14.jpg);
+  background-image: url(img/slide14.jpg);
 }
 .slide11 .slide-mask2 {
-  background-image: url(assets/slide15.jpg);
+  background-image: url(img/slide15.jpg);
 }
 .slide12 .slide-mask2 {
-  background-image: url(assets/slide16.jpg);
+  background-image: url(img/slide16.jpg);
 }
 .slide13 .slide-mask2 {
-  background-image: url(assets/slide17.jpg);
+  background-image: url(img/slide17.jpg);
 }
 
 .slide-buttons {
@@ -240,41 +229,107 @@ body {
   background-color: gray;
 }
 
-@media all and (max-width: 639px){
-  .slide {
-    width: 108px;
-    height: 125px;
-    margin: 5px;
-    margin-top: -33px;
-  }
-  
-  .slide1, .slide5, .slide10,
-  .slide4, .slide9, .slide13 {
-    display: none;
-  }   
-}
-
-@media all and (min-width: 640px) and (max-width: 819px) {
-  .slide {
-    width: 139px;
-    height: 160px;
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-top: -33px;
-  }
-  
-  .slide1, .slide5, .slide10 {
-    display: none;
-  }  
-}
-
-@media all and (min-width: 820px) and (max-width: 1080px){
+@media all and (max-width: 419px){
   .slide {
     width: 140px;
     height: 160px;
     margin-left: 5px;
     margin-right: 5px;
     margin-top: -33px;
+  }
+  .portfolio-container {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
+  .slide-br-mask:nth-of-type(2) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(3) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(4) {
+    display: none;
+  }
+  .slide-br-mask:nth-of-type(5) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(6) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(8) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(9) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(11) {
+    display: inline;
+  }
+  .slide:last-of-type {
+    display: none;
+  }
+}
+
+@media all and (min-width: 420px) and (max-width: 619px){
+  .slide-br-mask:nth-of-type(2) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(3) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(4) {
+    display: none;
+  }
+  .slide-br-mask:nth-of-type(5) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(6) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(8) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(9) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(11) {
+    display: inline;
+  }
+  .slide:last-of-type {
+    display: none;
+  }
+}
+
+@media all and (min-width: 620px) and (max-width: 819px) {
+  .slide-br-mask:nth-of-type(3) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(4) {
+    display: none;
+  }
+  .slide-br-mask:nth-of-type(5) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(8) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(9) {
+    display: none;
+  }
+  .slide-br-mask:nth-of-type(10) {
+    display: inline;
+  }
+}
+
+@media all and (min-width: 820px) and (max-width: 1020px){
+  .slide-br-mask:nth-of-type(7) {
+    display: inline;
+  }
+  .slide-br-mask:nth-of-type(9) {
+    display: none;
+  }
+  .slide:nth-of-type(12) {
+    margin-right: 200px;
   }
 }
 
@@ -321,7 +376,7 @@ body {
   height: 100%;
   background-repeat: no-repeat;
   background-position: 50%;
-  background-image: url(assets/myphoto.jpg);
+  background-image: url(img/myphoto.jpg);
   visibility: visible;
   -webkit-transform: rotate(-60deg);
   -ms-transform: rotate(-60deg);
@@ -366,7 +421,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #a5dbd4;
-  background-image: url("assets/sprite.svg");
+  background-image: url("img/sprite.svg");
   background-repeat: no-repeat; 
   border-right: 1px solid #74ccbf;
   border-bottom: 1px solid #65C2B0;
@@ -376,7 +431,7 @@ body {
 
 .about-social-button:hover,
 .about-social-button:active {
-  background-image: url("assets/sprite2.svg");
+  background-image: url("img/sprite2.svg");
   transition: 0.2s;
 }
 
@@ -530,7 +585,6 @@ body {
   padding-left: 20px;
   margin-top: 10px;
   color: #bebebe;
-  text-decoration: none;
 }
 
 .contact-email {
@@ -550,7 +604,7 @@ body {
   width: 20px;
   height: 20px;
   display: block;
-  background-image: url("assets/sprite.svg");
+  background-image: url("img/sprite.svg");
   background-repeat: no-repeat;
 }
 
