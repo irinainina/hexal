@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smith Anderson</title> 
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700|Maven+Pro:400' rel='stylesheet' type='text/css'> 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -121,12 +120,24 @@
         <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna</p>
       </div>
       <div class="about-social-buttons">
-        <a href="#" class="about-social-button about-social-button-fb"></a>
-        <a href="#" class="about-social-button about-social-button-tw"></a>
-        <a href="#" class="about-social-button about-social-button-gp"></a>
-        <a href="#" class="about-social-button about-social-button-pin"></a>
-        <a href="#" class="about-social-button about-social-button-lin"></a>
-        <a href="#" class="about-social-button about-social-button-dr"></a>
+        <a href="#" class="about-social-button about-social-button-fb">
+          <i class="icon-facebook"></i>
+        </a>
+        <a href="#" class="about-social-button about-social-button-tw">
+          <i class="icon-twitter"></i>
+        </a>
+        <a href="#" class="about-social-button about-social-button-gp">
+          <i class="icon-gplus"></i>
+        </a>
+        <a href="#" class="about-social-button about-social-button-pin">
+          <i class="icon-pinterest"></i>
+        </a>
+        <a href="#" class="about-social-button about-social-button-lin">
+          <i class="icon-linkedin"></i>
+        </a>
+        <a href="#" class="about-social-button about-social-button-dr">
+          <i class="icon-dribbble"></i>
+        </a>
       </div>
     </article>
   </section>
@@ -148,46 +159,55 @@
       </div>
       <div class="contact-text-container">
         <p class="contact-text"><strong>Quisque Hendrerit:</strong> purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. </p>
-        <p class="contact-addres">Elm St. 14/05 Lost City</p>
-        <p class="contact-phone">+ 3528 331 86 35</p>        
-        <p class="contact-email"><a href="mailto:info@hexalcorp.com">info@hexalcorp.com</a></p>
+        <p class="contact-addres"><i class="icon-location"></i>Elm St. 14/05 Lost City</p>
+        <p class="contact-phone"><i class="icon-phone"></i>+ 3528 331 86 35</p>        
+        <p class="contact-email"><i class="icon-mail"></i><a href="mailto:info@hexalcorp.com">info@hexalcorp.com</a></p>
       </div>
     </div>
   </section>
   
   <footer class="copyright">
     <p class="copyright-text">© Copyright 2013 by PSDchat</p>
-  </footer>
-  
-</body>
+  </footer> 
+
 <script>
   
-  var slides = document.querySelectorAll(".slide-mask2");
-  var buttons = document.querySelectorAll(".btn");
-   
-  function slideChange() {
-    for(let i = 0; i < slides.length; i++) {
-      const numSlide = slides[i].dataset.img;
-      const numBtn = this.dataset.key;
-      var numImage;
-      if(numSlide < 5) {
-        numImage = (+numSlide + +numBtn - 2) % 6;
-      } else if(numSlide > 5 && numSlide < 11) {
-        numImage = (+numSlide + +numBtn) % 6 + 6;
-      } else if(numSlide > 11) {
-        numImage = (+numSlide + +numBtn) % 6 + 13;
-      }
-      
-      buttons.forEach(btn => btn.classList.remove("btn-active"));
-      this.classList.add("btn-active"); 
-      
-      slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
+const slides = document.querySelectorAll(".slide-mask2");
+const buttons = document.querySelectorAll(".btn");
+
+function slideChange() {
+  for(let i = 0; i < slides.length; i++) {
+    const numSlide = slides[i].dataset.img;
+    const numBtn = this.dataset.key;
+
+    var numImage;
+    if(numSlide < 5) {
+      numImage = (+numSlide + +numBtn - 2) % 6;
+    } else if(numSlide > 5 && numSlide < 11) {
+      numImage = (+numSlide + +numBtn) % 6 + 6;
+    } else if(numSlide > 11) {
+      numImage = (+numSlide + +numBtn) % 6 + 13;
     }
-    
-  }
-  
-  buttons.forEach(btn => btn.addEventListener("click", slideChange));
-  
-  
+
+    slides.forEach(slide => slide.style.animation = "none");
+    slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
+    setTimeout(function(){
+      slides.forEach(slide => {
+        slide.style.animation = "fade 0.5s ease-in-out";})      
+    }, 1); 
+  }    
+}
+
+function btnColor() {
+  buttons.forEach(btn => {
+    btn.classList.remove("btn-active");
+    this.classList.add("btn-active"); 
+  });
+};
+
+buttons.forEach(btn => btn.addEventListener("click", slideChange));
+
+buttons.forEach(btn => btn.addEventListener("click", btnColor)); 
 </script>
+</body>
 </html>
