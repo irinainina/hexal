@@ -114,7 +114,7 @@
       <aside class="about-myphoto"><div class="about-myphoto-mask1"><div class="about-myphoto-mask2"></div></div></aside>
       <div class="about-right-column">
         <header>
-          <h1 class="about-myname">Smith Anderson</h1>
+          <h3 class="about-myname">Smith Anderson</h3>
           <p class="about-whoami">Illustrator & Character Designer</p>
         </header>
         <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna</p>
@@ -189,12 +189,15 @@ function slideChange() {
       numImage = (+numSlide + +numBtn) % 6 + 13;
     }
 
-    slides.forEach(slide => slide.style.animation = "none");
-    slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
+    
+    slides[i].style.animation = "none";
+    
     setTimeout(function(){
-      slides.forEach(slide => {
-        slide.style.animation = "fade 0.5s ease-in-out";})      
-    }, 1); 
+      slides[i].style.animation = "fade 0.5s ease-in-out";
+    }, 1)
+    
+    
+    slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
   }    
 }
 

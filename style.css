@@ -1,11 +1,11 @@
 @font-face {
       font-family: "Lato";
-      src: url("assets/lato/Lato-Regular.ttf");
+      src: url("assets/font/Lato-Regular.ttf");
     }
 
 @font-face {
       font-family: "Maven Pro";
-      src: url("assets/maven-pro/MavenPro-Regular.ttf");
+      src: url("assets/font/MavenPro-Regular.ttf");
     }
 
 @font-face {
@@ -201,8 +201,6 @@ body {
   from {opacity: 0.5;}
   to {opacity: 1; }
 }
-
-
 
 .slide-br-mask {
   display: none;
