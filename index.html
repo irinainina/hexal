@@ -177,26 +177,21 @@ const buttons = document.querySelectorAll(".btn");
 
 function slideChange() {
   for(let i = 0; i < slides.length; i++) {
-    const numSlide = slides[i].dataset.img;
-    const numBtn = this.dataset.key;
+    const numSlide = +slides[i].dataset.img;
+    const numBtn = +this.dataset.key;
 
-    var numImage;
+    let numImage;
     if(numSlide < 5) {
-      numImage = (+numSlide + +numBtn - 2) % 6;
+      numImage = (numSlide + numBtn - 2) % 6;
     } else if(numSlide > 5 && numSlide < 11) {
-      numImage = (+numSlide + +numBtn) % 6 + 6;
+      numImage = (numSlide + numBtn) % 6 + 6;
     } else if(numSlide > 11) {
-      numImage = (+numSlide + +numBtn) % 6 + 13;
+      numImage = (numSlide + numBtn) % 6 + 13;
     }
-
     
-    slides[i].style.animation = "none";
-    
-    setTimeout(function(){
-      slides[i].style.animation = "fade 0.5s ease-in-out";
-    }, 1)
-    
-    
+    slides[i].style.transitionDuration = "0.5s";
+    slides[i].style.transitionTimingFunction = "swing";
+    slides[i].style.transitionDelay = "0";
     slides[i].style.backgroundImage = "url(assets/slide" + numImage + ".jpg)";
   }    
 }
