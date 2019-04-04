@@ -160,6 +160,7 @@ body {
 }
 
 .slide {
+  position: relative;
   overflow: hidden;
   visibility: hidden;
   transform: rotate(120deg);
@@ -194,7 +195,6 @@ body {
   background-size: cover;
   visibility: visible;
   transform: rotate(-60deg);
-  position: relative;
 }
 
 .slide-br-mask {
@@ -211,7 +211,6 @@ body {
 
 .slide1 .slide-mask2 {
   background-image: url(assets/slide0.jpg);
-  border-left: 1px solid #e4e9eb;
 }
 .slide2 .slide-mask2 {
   background-image: url(assets/slide1.jpg);
@@ -398,12 +397,6 @@ body {
   transition: 0.2s;
 }
 
-.about-social-button:hover,
-.about-social-button:active {
-  color: #fff;
-  transition: 0.2s;
-}
-
 .about-social-button-tw {
   background-color: #6CCCC0;
 }
@@ -413,6 +406,70 @@ body {
 .about-social-button-dr {
   background-color: #6BCCBB;
   border-right: none;
+}
+
+.about-social-button:hover i,
+.about-social-button:active i {
+  color: #fff;
+}
+
+.about-social-button-fb:hover,
+.about-social-button-fb:active {
+  height: 24px;
+  background-color: #3660a0;
+  border-right: 1px solid #3660a0;
+  border-bottom: 1px solid #3660a0;
+  border-top: 1px solid #3660a0;
+  transition: 0.2s;
+}
+
+.about-social-button-tw:hover,
+.about-social-button-tw:active {
+  background-color: #2daae1;
+  border-right: 1px solid #2daae1;
+  border-bottom: 1px solid #2daae1;
+  border-top: 1px solid #2daae1;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.about-social-button-gp:hover,
+.about-social-button-gp:active {
+  background-color: #dc5442;
+  border-right: 1px solid #dc5442;
+  border-bottom: 1px solid #dc5442;
+  border-top: 1px solid #dc5442;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.about-social-button-pin:hover,
+.about-social-button-pin:active {
+  background-color: #ca2026;
+  border-right: 1px solid #ca2026;
+  border-bottom: 1px solid #ca2026;
+  border-top: 1px solid #ca2026;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.about-social-button-lin:hover,
+.about-social-button-lin:active {
+  background-color: #096c9b;
+  border-right: 1px solid #096c9b;
+  border-bottom: 1px solid #096c9b;
+  border-top: 1px solid #096c9b;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.about-social-button-dr:hover,
+.about-social-button-dr:active {
+  background-color: #ef558e;
+  border-bottom: 1px solid #ef558e;
+  border-top: 1px solid #ef558e;
+  color: #fff;
+  transition: 0.2s;
 }
 
 @media all and (max-width: 620px){
@@ -523,6 +580,7 @@ body {
   padding: 12px;
   border: none;
   margin-top: 16px;
+  resize: none;
 }
 
 .contact-text-container {
